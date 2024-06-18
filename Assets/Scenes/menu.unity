@@ -206,8 +206,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1971656642}
-        m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
-        m_MethodName: StartTheGame
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -720,7 +720,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 70}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 400, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1066239813
 MonoBehaviour:
@@ -755,7 +755,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Best Score
+  m_Text: 'Best Score: 0 Name:'
 --- !u!222 &1066239814
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1124,8 +1124,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1971656642}
-        m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
-        m_MethodName: ExitTheGame
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1184,7 +1184,7 @@ GameObject:
   - component: {fileID: 1566011217}
   - component: {fileID: 1566011216}
   m_Layer: 0
-  m_Name: Manager
+  m_Name: MainGameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1202,7 +1202,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54d9486f78a4feb47b2a5c72bd151544, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerName: 
+  playerName: 
+  bestScore: 0
 --- !u!4 &1566011217
 Transform:
   m_ObjectHideFlags: 0
@@ -1415,7 +1416,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05d0acd474492594480a51178f78225d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerNameInput: 
+  playerNameInput: {fileID: 916560476}
+  bestScoreText: {fileID: 1066239813}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
